@@ -8,7 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "usuarios")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,7 @@ public class User {
     private String nome;
     private String email;
     private String senha;
-    private Date dataNasc;
+    private Date dataNascimento;
     private int pontuacao;
 
     public User() {}
@@ -25,7 +25,7 @@ public class User {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.dataNasc = dataNasc;
+        this.dataNascimento = dataNasc;
         this.pontuacao = pontuacao;
     }
 
@@ -60,17 +60,17 @@ public class User {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public Date getDataNasc() {
-        return dataNasc;
-    }
-
-    public void setDataNasc(Date dataNasc) {
-        this.dataNasc = dataNasc;
-    }
-
+    
     public int getPontuacao() {
         return pontuacao;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public void setPontuacao(int pontuacao) {

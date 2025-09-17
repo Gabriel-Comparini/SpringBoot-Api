@@ -17,7 +17,7 @@ import com.javaspring.springboot_api.model.User;
 import com.javaspring.springboot_api.repository.UserRepository;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 public class UserController {
     private final UserRepository repository;
     public UserController(UserRepository repository) {
@@ -49,7 +49,7 @@ public class UserController {
             user.setNome(novoUser.getNome());
             user.setEmail(novoUser.getEmail());
             user.setSenha(novoUser.getSenha());
-            user.setDataNasc(novoUser.getDataNasc());
+            user.setDataNascimento(novoUser.getDataNascimento());
             user.setPontuacao(novoUser.getPontuacao());
             return repository.save(user);
         }).orElse(null);
