@@ -1,4 +1,4 @@
-Precisa incluir a database no mysql: (jdbc:mysql://localhost:3306/loja)
+Precisa incluir a database no mysql: (jdbc:mysql://localhost:3306/loja1)
 
 
 Abre na porta http://localhost:8080/
